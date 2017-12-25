@@ -1,0 +1,74 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "nav nav nav nav" "header header header header" "p1 p2 p3 p4" "footer footer footer footer";
+    grid-column-gap: 10px;
+    width: 100%;
+}
+nav {
+    grid-area: nav;
+}
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: rgb(139, 2, 2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+nav li {
+    float: left;
+    padding: 14px 16px;
+    color: white;
+    font-size: 20px;
+}
+nav li:hover {
+    cursor: pointer;
+    background: rgb(105, 0, 0);
+}
+nav a {
+    text-decoration: none;
+    display: block;
+}
+header {
+    font-size: 60px;
+    margin: 65px 20px 25px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    grid-area: header;
+}
+img {
+    float: right;
+    margin: 5px;
+    border: 1px solid rgb(136, 135, 135);
+}
+footer {
+    width: 100%;
+    background: rgb(139, 2, 2);
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+    grid-area: footer;
+}
+footer p {
+    margin: 5px auto;
+}
+#firstNews {
+    grid-area: p1;
+}
+#secondNews {
+    grid-area: p2;
+}
+#thirdNews {
+    grid-area: p3;
+}
+#fourthNews {
+    grid-area: p4;
+}
+.container p {
+    margin-left: 8px;
+}
